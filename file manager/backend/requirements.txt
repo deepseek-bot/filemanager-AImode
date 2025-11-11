@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+requests
+chromadb
+python-docx
+docx2txt
+pypdf2
+tqdm
+watchdog
