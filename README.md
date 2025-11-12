@@ -74,9 +74,11 @@ The process will run in the background.
 To stop it:  
 `
 ps aux | grep watch_uploads.py
-
 `
-`kill <PID>`
+`
+
+kill <PID>
+`
 
 ⚡Personalized usage:
 If you want to change the Ollama model, simply update the model name in both `docker-compose.yml` and `main.py`, and make sure they remain consistent.
