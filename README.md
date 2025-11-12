@@ -20,27 +20,27 @@ This project relies on GPU acceleration.
 git clone https://github.com/deepseek-bot/filemanager-AImode.git 
 
 1. Install Docker  
-   `bash
+   `
    sudo apt install docker -y
    `
 2. Install Docker Compose plugin  
-   `bash
+   `
    sudo apt install docker-compose-plugin -y
    `
 3. Create network  
-   `bash
+   `
    docker network create ollama-net
    `
 4. Start Ollama container  
-   `bash
+   `
    docker compose up
    `
 5. Pull Ollama model  
-   `bash
+   `
    docker exec -it ollama bash -c "ollama pull qwen2.5:3b"
    `
 6. Start filemanager container  
-   `bash
+   `
    cd filemanager
    docker compose up
    `
@@ -51,7 +51,7 @@ model default:
 
 ⚒️Use steps(demo):
 Run file monitoring:  
-`bash
+`
 docker exec -it personalragbackend bash -c "python3 watch_uploads.py"
 `
 
@@ -62,17 +62,17 @@ docker exec -it personalragbackend bash -c "python3 watch_uploads.py"
 - After uploading files, press Ctrl+C to quit.  
 
 Interact with AI inside the container:  
-`bash
+`
 docker exec -it personalragbackend bash -c "python3 cli.py"
 `
 
 Run in background (optional):  
-`bash
+`
 docker exec -it personalragbackend bash -c "nohup python3 watch_uploads.py &"
 `
 The process will run in the background.  
 To stop it:  
-`bash
+`
 ps aux | grep watch_uploads.py
 kill <PID>
 `
